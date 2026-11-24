@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
-"""Build the 24 Nov 2026 front-page image. Local build tool only;
-the entry program itself (main.py) only copies entry.png."""
+"""Build the 24 Nov 2026 front-page image. Local build tool only.
+
+It draws the PNG with Pillow and DejaVu fonts and saves entry.png;
+the entry program (main.py) does not run it, it decodes the bundled
+base64 form of the same image. Output is deterministic: rebuilding
+writes 164,515 bytes, sha256
+5221db7d9ad18db8642e0d4d5c3cbdf34a442a55ed2d646756af854923dd4343."""
 import textwrap
 from PIL import Image, ImageDraw, ImageFont
 
